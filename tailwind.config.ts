@@ -8,12 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: { min: "640px", max: "767px" },
+        md: { min: "768px", max: "1023px" },
+        lg: { min: "1280px", max: "1535px" },
+        xl: { min: "1536px" },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        neuBold: ["var(--font-neu-bold)"],
+        neuMedium: ["var(--font-neu-medium)"],
+        neuBook: ["var(--font-neu-book)"],
+        neuThin: ["var(--font-neu-thin)"],
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };
 export default config;
