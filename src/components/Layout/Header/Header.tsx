@@ -9,7 +9,7 @@ export default function Header() {
     const toggleMenu = () => setOpen(!open);
 
     return (
-        <header className="w-full py-4 backdrop-blur-sm fixed top-0 left-0 flex items-center px-5">
+        <header className="w-full py-4 backdrop-blur-sm fixed top-0 left-0 flex items-center px-5 z-50">
             <nav className="w-full max-w-[800px] bg-[#EDF3FF] border border-[#92AEE9] rounded-lg px-5 flex justify-between mx-auto z-10 flex-col opacity-80">
                 <div className="flex justify-between w-full items-center py-5 md:py-0 font-neuMedium">
                     <Link href="/">
@@ -27,7 +27,7 @@ export default function Header() {
                         />
                     </button>
                 </div>
-
+                {/* Mobile View */}
                 {open && (
                     <div className="w-full py-16 h-auto font-neuBold">
                         <NavList isMobile={true} />
