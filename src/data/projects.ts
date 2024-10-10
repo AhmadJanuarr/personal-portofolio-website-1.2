@@ -1,0 +1,42 @@
+export const PROJECTS = [
+    {
+        id: 1,
+        title: "Calculator-reactjs",
+        desc: "I use the learning method by learning by doing, what I got when building a calculator with ReactJS was the use of the useState hook, conditional rendering, mapping a component and props in passing from parents to children.",
+        star: 1,
+        date: "21-Jan-2023",
+        image: "/img/icon.webp",
+    },
+    {
+        id: 2,
+        title: "Bookshelf-Haven",
+        desc: "This application allows users to search for Pokemon and displays detailed information taken from PokeAPI.",
+        star: 10,
+        date: "13-March-2023",
+        image: "/img/icon2.webp",
+    },
+    {
+        id: 3,
+        title: "Pokedex-amara",
+        desc: "This application allows users to search for Pokémon and displays detailed information taken from PokeAPI.",
+        star: 30,
+        date: "13-Jul-2024",
+        image: "/img/icon3.webp",
+    },
+    {
+        id: 4,
+        title: "Aralens",
+        desc: "Aralens is a gallery application that displays photography results with an elegant and responsive appearance.",
+        star: 10,
+        date: "15-Agt-2024",
+        image: "/img/icon4.webp",
+    },
+    {
+        id: 5,
+        title: "Todolist Task Manager",
+        desc: "My first project used React JS and Typscript plus state management using the library from Zustand. ",
+        star: 10,
+        date: "04-Jan-2024",
+        image: "/img/icon5.webp",
+    },
+];

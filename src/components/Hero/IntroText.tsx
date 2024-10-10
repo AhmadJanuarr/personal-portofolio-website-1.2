@@ -1,9 +1,20 @@
 export default function IntroText() {
     return (
-        <div className="w-full border border-2-[#FFFFFF]">
-            <div className="text-[16px] font-neuBook max-w-[650px] tracking-wide ">
-                <p>Hi, I&apos;m Ahmad Januar Amriyansah, a Front End Developer who is passionate about building beautiful, responsive, and user-friendly websites. I am an expert in JavaScript, ReactJS, and modern web technologies.</p>
+        <div className="w-full font-neuBook">
+            <div className="text-[14px] md:text-[16px]  max-w-[280px] lg:max-w-[650px] tracking-wider">
+                <p>
+                    👋 Hi, I&apos;m {" "}
+                    <span className="text-secondary">Ahmad Januar Amriyansah</span> 💻 A
+                    Front End Developer who is passionate about building 🌐 beautiful,
+                    responsive, and user-friendly websites.
+                </p>
+                <p className="mt-5 lg:mt-0 ">
+                    ⚡ I am an expert in{" "}
+                    <span className="text-secondary">JavaScript, ⚛️</span>
+                    <span className="text-secondary">ReactJS</span>, and
+                    <span className="text-secondary">🚀 modern web technologies</span>.✨
+                </p>
             </div>
         </div>
-    )
+    );
 }

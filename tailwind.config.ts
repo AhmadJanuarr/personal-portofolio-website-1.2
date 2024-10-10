@@ -5,18 +5,19 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/views/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       screens: {
-        sm: { min: "640px", max: "767px" },
-        md: { min: "768px", max: "1023px" },
-        lg: { min: "1280px", max: "1535px" },
+        sm: { min: "640px" },
+        md: { min: "768px" },
+        lg: { min: "1280px" },
         xl: { min: "1536px" },
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#444444",
+        secondary: "#375ACB",
       },
       fontFamily: {
         neuBold: ["var(--font-neu-bold)"],
