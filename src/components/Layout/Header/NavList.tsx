@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const NAV_ITEMS = [
-    { id: 1, name: "Projects", link: "#projects", color: "#93c5fd" },
-    { id: 2, name: "About", link: "#about", color: "#a5b4fc" },
-    { id: 3, name: "Contact", link: "#contact", color: "#ddd6fe" },
-    { id: 4, name: "Uses", link: "#uses", color: "#e9d5ff" },
+    { id: 1, name: "Projects", link: "/projects", color: "#93c5fd" },
+    { id: 2, name: "About", link: "/about", color: "#a5b4fc" },
+    { id: 3, name: "Contact", link: "/contact", color: "#ddd6fe" },
+    { id: 4, name: "Uses", link: "/uses", color: "#e9d5ff" },
 ];
 
 export default function NavList({ isMobile }: { isMobile: boolean }) {
