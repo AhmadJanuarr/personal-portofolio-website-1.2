@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { LIST_PROJECTS } from "@/data/projects.ts";
+import StartContainer from "./Star";
 
 export function CardProject() {
   return (
@@ -22,7 +23,7 @@ export function CardProject() {
               <h1 className="font-neuBold text-[14px] md:text-[18px]">
                 {item.title}
               </h1>
-              <p>{item.star}</p>
+              <StartContainer>{item.star}</StartContainer>
             </div>
             <p className="text-[14px] md:text-[16px]">
               {item.desc.slice(0, 50).concat("...")}
@@ -32,7 +33,8 @@ export function CardProject() {
             </p>
           </div>
         </div>
-      ))}
-    </div>
+      ))
+      }
+    </div >
   );
 }
