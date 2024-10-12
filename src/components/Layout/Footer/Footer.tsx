@@ -7,14 +7,17 @@ const NAV_ITEMS = [
   {
     title: "NAVIGATE",
     links: ["Home", "About", "Contact", "Project", "Uses"],
+    url: ["/", "/about", "/contact", "/projects", "/uses"]
   },
   {
     title: "BUILD",
     links: ["Next.Js", "TailwindCSS", "API", "Community"],
+    url: ["https://nextjs.org/", "https://tailwindcss.com/", "https://nextjs.org/docs/api-routes/introduction", "https://nextjs.org/community"]
   },
   {
     title: "MISC",
-    links: ["Donate", "Github", "Linkedin"],
+    links: ["Paypal", "Github", "Linkedin"],
+    url: ["https://paypal.me/ahmadjanuar?country.x=ID&locale.x=id_ID", "https://github.com/AhmadJanuarr", "https://www.linkedin.com/in/ahmad-januar-a96515221/"]
   },
 ];
 
@@ -52,7 +55,7 @@ export default function Footer() {
       {/* Column 2-4 - Dynamic Nav Columns */}
       <div className="flex justify-between md:w-3/5">
         {NAV_ITEMS.map((item, index) => (
-          <FooterColumn key={index} title={item.title} links={item.links} />
+          <FooterColumn key={index} title={item.title} links={item.links} url={item.url} />
         ))}
       </div>
     </footer>
