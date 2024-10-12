@@ -11,7 +11,7 @@ export const LIST_PROJECTS = [
   {
     id: 2,
     title: "Bookshelf-Haven",
-    desc: "This application allows users to search for Pokemon and displays detailed information taken from PokeAPI.",
+    desc: "Bookshelf-Haven is a book collection management application designed to make it easier for users to organize, find, and store their favorite books.",
     star: 10,
     date: "13-March-2023",
     image: "/img/icon2.webp",
