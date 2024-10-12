@@ -31,7 +31,7 @@ export const LIST_MY_SKILL = [
         id: 5,
         name: "TailwindCSS",
         link: "https://tailwindcss.com/",
-        icon: "/svg/skill/TailwindCSS.svg",
+        icon: "/svg/skill/Tailwindcss.svg",
         color: "#38bdf8"
     },
     {

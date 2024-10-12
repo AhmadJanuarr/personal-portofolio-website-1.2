@@ -2,7 +2,7 @@ export const ICON_LIST = [
   {
     id: 1,
     name: "youtube",
-    src: "/svg/Youtube.svg",
+    src: "/svg/YouTube.svg",
     link: "https://www.youtube.com/@JOJO-dc3wm",
   },
   {
@@ -25,8 +25,8 @@ export const ICON_LIST = [
   },
   {
     id: 5,
-    name: "Github",
-    src: "/svg/Github.svg",
+    name: "GitHub",
+    src: "/svg/GitHub.svg",
     link: "https://github.com/AhmadJanuarr",
   },
   {
