@@ -24,6 +24,7 @@ export default function Header() {
               width={30}
               height={30}
               alt="menu toggle"
+              className="h-auto w-auto"
             />
           </button>
         </div>

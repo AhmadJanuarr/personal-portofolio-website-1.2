@@ -28,7 +28,7 @@ export default function NavList({ isMobile, toggleMenu }: { isMobile: boolean, t
         </Link>
       ))}
       <li className="flex w-full cursor-pointer items-center justify-center px-2 py-3">
-        <Image src="/svg/Sun.svg" width={35} height={35} alt="sun" />
+        <Image src="/svg/Sun.svg" width={35} height={35} alt="sun" className="h-auto w-auto" />
       </li>
     </ul>
   );

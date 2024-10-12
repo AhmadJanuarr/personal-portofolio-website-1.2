@@ -12,7 +12,7 @@ export default function BlogItem() {
               alt={item.title}
               layout="fill"
               objectFit="cover"
-              className="rounded-lg"
+              className="rounded-lg h-auto w-auto"
             />
           </div>
           <div className="items-center text-[14px] md:text-[16px] ">
