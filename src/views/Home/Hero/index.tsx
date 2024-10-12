@@ -3,11 +3,11 @@ import IntroText from "@/components/Hero/IntroText";
 import { CallToActionText } from "@/components/Hero/CallToActionText";
 
 export default function Hero() {
-    return (
-        <div>
-            <HeroText />
-            <IntroText />
-            <CallToActionText />
-        </div >
-    )
+  return (
+    <div>
+      <HeroText />
+      <IntroText />
+      <CallToActionText />
+    </div>
+  );
 }
