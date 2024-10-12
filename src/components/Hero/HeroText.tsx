@@ -7,7 +7,7 @@ export function HeroText() {
         <p>Front End Developer</p>
         <p>Web Designer </p>
         <p>Content Creator</p>
-        <span className="absolute right-20 top-60 z-10 h-14 w-14 rotate-12 rounded-xl bg-gray-50 shadow-xl transition-transform duration-300 hover:scale-110 md:right-4 md:top-60 md:h-16 md:w-16">
+        <span className="absolute right-20 top-60 z-10 h-14 w-14 rotate-12 rounded-xl bg-gray-50 shadow-xl transition-transform duration-75 hover:scale-110 md:right-4 md:top-60 md:h-16 md:w-16">
           <Image
             src="/svg/vsc.svg"
             width={40}
@@ -16,7 +16,7 @@ export function HeroText() {
             className="h-full w-full rotate-12"
           />
         </span>
-        <span className="absolute right-2 top-0 z-10 h-14 w-14 -rotate-12 rounded-xl bg-gray-50 shadow-xl transition-transform duration-300 hover:scale-110 md:h-16 md:w-16">
+        <span className="absolute right-0 top-0 z-10 h-14 w-14 -rotate-12 rounded-xl bg-gray-50 shadow-xl transition-transform duration-75 hover:scale-110 md:h-16 md:w-16">
           <Image
             src="/svg/Figma.svg"
             width={40}
@@ -25,7 +25,7 @@ export function HeroText() {
             className="h-full w-full rotate-12"
           />
         </span>
-        <span className="absolute right-4 top-36 z-10 h-14 w-14 -rotate-12 rounded-xl bg-gray-50 shadow-xl transition-transform duration-300 hover:scale-110 md:right-28 md:top-28 md:h-16 md:w-16">
+        <span className="absolute right-4 top-36 z-10 h-14 w-14 -rotate-12 rounded-xl bg-gray-50 shadow-xl transition-transform duration-75 hover:scale-110 md:right-28 md:top-28 md:h-16 md:w-16">
           <Image
             src="/svg/Atlassian.svg"
             width={40}
