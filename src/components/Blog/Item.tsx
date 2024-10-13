@@ -7,12 +7,13 @@ export default function BlogItem() {
     <div className="w-full font-neuBook tracking-wider">
       {BLOG_ITEMS.slice(0, 4).map((item) => (
         <div className="flex items-center gap-3 py-3 lg:py-4" key={item.id}>
-          <div className="relative h-[100px] w-[200px] md:h-[100px] md:w-[150px] lg:h-[140px] lg:w-[200px]">
+          <div className="relative">
             <Image
               src={item.imageUrl}
               alt={item.title}
-              fill
-              sizes="(max-width: 768px) 150px, (max-width: 1024px) 200px, 100vw"
+              width={120}
+              height={120}
+              sizes="(max-width: 768px) 200px, (max-width: 1390px) 200px, 200px"
               className="rounded-lg object-cover w-full h-full"
             />
           </div>

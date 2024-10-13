@@ -11,11 +11,13 @@ export function CardProject() {
           style={{ "--color": item.color } as React.CSSProperties}
           className={`flex gap-3 rounded-lg py-3  pl-4 lg:py-4 hover:bg-[var(--color)] group transition-all duration-75 `}
         >
-          <div className="relative w-[120px] h-[90px] md:h-[120px]">
+          <div className="relative">
             <Image
               src={item.image}
               alt={item.title}
-              fill
+              width={100}
+              height={100}
+              sizes="(max-width: 768px) 100px, (max-width: 1390px) 130px, 130px"
               className="object-cover rounded-lg group-hover:scale-105 transition-all duration-75 will-change-transform "
             />
           </div>
