@@ -24,7 +24,7 @@ export default function ButtonCustom({
             width={24}
             height={24}
             sizes="(max-width: 768px) 24px, (max-width: 1390px) 24px, 30px"
-            style={{ width: 'auto', height: 'auto' }} // Menjaga rasio aspek gambar
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
         <span>{children}</span>
