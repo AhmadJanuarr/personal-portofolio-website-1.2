@@ -2,6 +2,7 @@ import { BLOG_ITEMS } from "@/data/blogs";
 import Image from "next/image";
 
 export default function BlogItem() {
+
   return (
     <div className="w-full font-neuBook tracking-wider">
       {BLOG_ITEMS.slice(0, 4).map((item) => (
@@ -10,15 +11,15 @@ export default function BlogItem() {
             <Image
               src={item.imageUrl}
               alt={item.title}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg h-auto w-auto"
+              fill
+              sizes="(max-width: 768px) 150px, (max-width: 1024px) 200px, 100vw"
+              className="rounded-lg object-cover w-full h-full"
             />
           </div>
           <div className="items-center text-[14px] md:text-[16px] ">
             <h1 className="font-neuBold">{item.title}</h1>
             <p className="pb-2">
-              {item.description.slice(0, 70).concat("...")}
+              {item.description.slice(0, 50).concat("...")}
             </p>
             <div className="flex gap-5 font-neuThin text-[12px] text-[#444444] md:text-[14px]">
               <p>{item.dateCreated}</p>

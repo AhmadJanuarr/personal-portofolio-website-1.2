@@ -9,15 +9,16 @@ export function CardProject() {
         <div
           key={item.id}
           style={{ "--color": item.color } as React.CSSProperties}
-          className={`flex gap-3 rounded-lg py-3  pl-4 lg:py-4 hover:bg-[var(--color)] group transition-all duration-75`}
+          className={`flex gap-3 rounded-lg py-3  pl-4 lg:py-4 hover:bg-[var(--color)] group transition-all duration-75 `}
         >
-          <Image
-            src={item.image}
-            alt={item.title}
-            width={100}
-            height={67}
-            className="rounded-lg group-hover:scale-105 transition-all duration-75 will-change-transform"
-          />
+          <div className="relative w-[120px] h-[90px] md:h-[120px]">
+            <Image
+              src={item.image}
+              alt={item.title}
+              fill
+              className="object-cover rounded-lg group-hover:scale-105 transition-all duration-75 will-change-transform "
+            />
+          </div>
           <div className="items-center">
             <div className="flex gap-2">
               <h1 className="font-neuBold text-[14px] md:text-[18px]">
