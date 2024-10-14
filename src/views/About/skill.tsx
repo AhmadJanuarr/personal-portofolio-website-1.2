@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { AbilityType } from "@/types/ability.type";
 
 export function Card({
     url,
@@ -26,23 +26,12 @@ export function Card({
     );
 }
 
-export default function Skill() {
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        fetch("/api/skills")
-            .then((res) => res.json())
-            .then((response) => {
-                setData(response.data)
-            })
-            .catch((err) => console.log(err));
-    }, [])
-
-    console.log(data)
+export default function Skill({ ability }: { ability: AbilityType[] }) {
     return (
         <div className="py-10">
             <h1 className="py-7 font-neuBold text-2xl">Skill</h1>
             <div className="flex w-full flex-wrap gap-3">
-                {data.map(({ id, name, url, icon, color }) => (
+                {ability.map(({ id, name, url, icon, color }) => (
                     <Card key={id} url={url || "#"} icon={icon} name={name} color={color} />
                 ))}
             </div>
