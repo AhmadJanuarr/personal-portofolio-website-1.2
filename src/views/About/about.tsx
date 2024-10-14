@@ -54,7 +54,9 @@ export default function Introduce() {
           </a>{" "}
           or find me on social media and let’s make something great happen! 🎉
         </TextContent>
-        <SosialMediaIcon />
+        <div className="pt-5">
+          <SosialMediaIcon />
+        </div>
       </div>
     </div>
   );
