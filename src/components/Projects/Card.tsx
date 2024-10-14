@@ -2,7 +2,7 @@ import Image from "next/image";
 import { LIST_PROJECTS } from "@/data/projects.ts";
 import StartContainer from "./Star";
 
-export function CardProject() {
+export default function CardProject() {
   return (
     <div className="w-full font-neuBook tracking-wider">
       {LIST_PROJECTS.map((item) => (
