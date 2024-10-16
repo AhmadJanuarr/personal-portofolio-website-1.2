@@ -1,12 +1,12 @@
 import { Container } from "..";
+import { AbilityType } from "@/types/ability.type";
 import Introduce from "@/views/About/about";
 import Heading from "@/components/Layout/Heading";
 import Skill from "@/views/About/skill";
 import Experience from "@/views/About/experience";
-import { AbilityType } from "@/types/ability.type";
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/skills");
+  const res = await fetch("http://localhost:3000/api/ability");
   const response = await res.json();
   return {
     props: {

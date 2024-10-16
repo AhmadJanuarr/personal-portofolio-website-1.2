@@ -48,7 +48,7 @@ export default function Footer() {
         </p>
         <SosialMediaIcon />
         <div className="w-1/2 pt-10 md:w-full">
-          <ButtonCustom src="/svg/Touch.svg">Get in touch</ButtonCustom>
+          <ButtonCustom src="/svg/Touch.svg" href="/contact">Get in touch</ButtonCustom>
         </div>
       </div>
 
