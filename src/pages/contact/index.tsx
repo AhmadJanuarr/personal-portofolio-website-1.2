@@ -1,7 +1,13 @@
+import { Container } from ".."
+import Heading from "@/components/Layout/Heading"
+import ContactUs from "@/views/Contact/ContactUs"
+
 export default function Contact() {
-  return (
-    <div className="h-[100vh] w-full">
-      <h1>Contact</h1>
-    </div>
-  );
+    return (
+        <Container>
+            <Heading heading="Contact">
+                <ContactUs />
+            </Heading>
+        </Container>
+    )
 }
