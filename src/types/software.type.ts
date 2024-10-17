@@ -1,7 +1,7 @@
-export type AbilityType = {
+export interface SoftwareType {
     id: string
     name: string
-    url: string
     icon: string
+    url: string
     color: string
 }
