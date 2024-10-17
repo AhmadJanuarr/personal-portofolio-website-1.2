@@ -1,10 +1,10 @@
-import Heading from "@/components/Layout/Heading";
-import CardProject from "@/components/Projects/Card";
+import Heading from "@/components/Layout/Heading"
+import CardProject from "@/components/Projects/Card"
 
 export default function ProjectSection() {
-  return (
-    <Heading heading="Projects">
-      <CardProject />
-    </Heading>
-  );
+    return (
+        <Heading heading="Projects">
+            <CardProject />
+        </Heading>
+    )
 }

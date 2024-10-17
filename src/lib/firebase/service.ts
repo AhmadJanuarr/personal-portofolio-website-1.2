@@ -1,12 +1,13 @@
-import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { app } from "./init";
-import { AbilityType } from "@/types/ability.type";
-import { ProjectsType } from "@/types/projets.type";
+import { collection, getDocs, getFirestore } from "firebase/firestore"
+import { app } from "./init"
+import { AbilityType } from "@/types/ability.type"
+import { ProjectsType } from "@/types/projets.type"
+import { SoftwareType } from "../../types/software.type"
 
-const firestore = getFirestore(app);
+const firestore = getFirestore(app)
 
 export async function retriveData(collectionName: string) {
-    const snapshot = await getDocs(collection(firestore, collectionName));
+    const snapshot = await getDocs(collection(firestore, collectionName))
     const ability = snapshot.docs.map((doc) => {
         return {
             id: doc.id,
@@ -14,8 +15,8 @@ export async function retriveData(collectionName: string) {
             url: doc.data().url,
             icon: doc.data().icon,
             color: doc.data().color,
-        } as AbilityType;
-    });
+        } as AbilityType
+    })
     const projects = snapshot.docs.map((doc) => {
         return {
             id: doc.id,
@@ -27,7 +28,17 @@ export async function retriveData(collectionName: string) {
             color: doc.data().color,
             status: doc.data().status,
             technologies: doc.data().technologies,
-        } as ProjectsType;
+        } as ProjectsType
     })
-    return { ability, projects }
+    const softwareApp = snapshot.docs.map((doc) => {
+        return {
+            id: doc.id,
+            name: doc.data().name,
+            icon: doc.data().icon,
+            color: doc.data().color,
+            url: doc.data().url,
+        } as SoftwareType
+    })
+
+    return { ability, projects, softwareApp }
 }
