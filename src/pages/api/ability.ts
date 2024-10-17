@@ -18,13 +18,18 @@ export default async function handler(
 
     try {
         const data = await retriveData("dev")
+        console.log(data)
         res.status(200).json({
             status: true,
             statusCode: 200,
             data: data.ability,
         })
     } catch (error) {
-        console.error("Error fetching data: ", error)
+        if (error instanceof Error) {
+            console.error("Error fetching data: ", error.message);
+        } else {
+            console.error("Error fetching data: ", error);
+        }
         res.status(500).json({ status: false, statusCode: 500, data: [] })
     }
 }
