@@ -2,7 +2,7 @@ import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { app } from "./init"
 import { AbilityType } from "@/types/ability.type"
 import { ProjectsType } from "@/types/projets.type"
-import { SoftwareType } from "../../types/software.type"
+import { SoftwareType } from "@/types/software.type"
 
 const firestore = getFirestore(app)
 
