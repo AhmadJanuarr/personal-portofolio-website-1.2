@@ -6,7 +6,11 @@ import EditorSetup from "@/views/Uses/EditorSetup"
 import BrowserSetup from "@/views/Uses/BrowserSetup"
 
 export async function getServerSideProps() {
-    const res = await fetch("http://localhost:3000/api/softwares")
+    const apiUrl = process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}/api/ability`
+        : "http://localhost:3000/api/ability";
+
+    const res = await fetch(apiUrl)
     const response = await res.json()
     return {
         props: {
