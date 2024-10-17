@@ -7,8 +7,8 @@ import BrowserSetup from "@/views/Uses/BrowserSetup"
 
 export async function getServerSideProps() {
     const apiUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}/api/ability`
-        : "http://localhost:3000/api/ability";
+        ? `https://${process.env.VERCEL_URL}/api/softwares`
+        : "http://localhost:3000/api/softwares";
 
     const res = await fetch(apiUrl)
     const response = await res.json()
