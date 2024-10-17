@@ -1,5 +1,5 @@
 import { create } from "zustand"
-import { ProjectsType } from "../types/projets.type"
+import { ProjectsType } from "../types/projects.type"
 
 type ProjectState = {
     projects: ProjectsType[]

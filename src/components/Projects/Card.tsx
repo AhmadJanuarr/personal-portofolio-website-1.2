@@ -2,7 +2,7 @@ import Image from "next/image"
 import StarContainer from "./Star"
 import { useProjectStore } from "@/stores/projectStore"
 import { useEffect } from "react"
-import { ProjectsType } from "../../types/projets.type"
+import { ProjectsType } from "../../types/projects.type"
 
 export default function CardProject() {
     const { projects, fetchProjects, isLoading } = useProjectStore()

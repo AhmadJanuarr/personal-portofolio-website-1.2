@@ -1,44 +1,58 @@
-import { collection, getDocs, getFirestore } from "firebase/firestore"
-import { app } from "./init"
-import { AbilityType } from "@/types/ability.type"
-import { ProjectsType } from "@/types/projets.type"
-import { SoftwareType } from "@/types/software.type"
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { app } from "./init";
+import { AbilityType } from "@/types/ability.type";
+import { ProjectsType } from "@/types/projects.type";
+import { SoftwareType } from "@/types/software.type";
 
-const firestore = getFirestore(app)
+const firestore = getFirestore(app);
 
 export async function retriveData(collectionName: string) {
-    const snapshot = await getDocs(collection(firestore, collectionName))
-    const ability = snapshot.docs.map((doc) => {
-        return {
-            id: doc.id,
-            name: doc.data().name,
-            url: doc.data().url,
-            icon: doc.data().icon,
-            color: doc.data().color,
-        } as AbilityType
-    })
-    const projects = snapshot.docs.map((doc) => {
-        return {
-            id: doc.id,
-            title: doc.data().title,
-            description: doc.data().description,
-            star: doc.data().star,
-            date: doc.data().date,
-            image: doc.data().image,
-            color: doc.data().color,
-            status: doc.data().status,
-            technologies: doc.data().technologies,
-        } as ProjectsType
-    })
-    const softwareApp = snapshot.docs.map((doc) => {
-        return {
-            id: doc.id,
-            name: doc.data().name,
-            icon: doc.data().icon,
-            color: doc.data().color,
-            url: doc.data().url,
-        } as SoftwareType
-    })
+    const snapshot = await getDocs(collection(firestore, collectionName));
 
-    return { ability, projects, softwareApp }
+    const ability: AbilityType[] = [];
+    const projects: ProjectsType[] = [];
+    const softwareApp: SoftwareType[] = [];
+
+    snapshot.docs.forEach((doc) => {
+        const data = doc.data();
+
+        // Map Ability
+        if (data.name && data.url && data.icon && data.color) {
+            ability.push({
+                id: doc.id,
+                name: data.name,
+                url: data.url,
+                icon: data.icon,
+                color: data.color,
+            } as AbilityType);
+        }
+
+        // Map Projects
+        if (data.title && data.description && data.star && data.date && data.image && data.color && data.status && data.technologies) {
+            projects.push({
+                id: doc.id,
+                title: data.title,
+                description: data.description,
+                star: data.star,
+                date: data.date,
+                image: data.image,
+                color: data.color,
+                status: data.status,
+                technologies: data.technologies,
+            } as ProjectsType);
+        }
+
+        // Map Software
+        if (data.name && data.icon && data.color && data.url) {
+            softwareApp.push({
+                id: doc.id,
+                name: data.name,
+                icon: data.icon,
+                color: data.color,
+                url: data.url,
+            } as SoftwareType);
+        }
+    });
+
+    return { ability, projects, softwareApp };
 }
