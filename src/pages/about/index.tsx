@@ -10,6 +10,7 @@ export async function getServerSideProps() {
         ? `https://${process.env.VERCEL_URL}/api/ability`
         : "http://localhost:3000/api/ability"
 
+    console.log(apiUrl)
     const res = await fetch(apiUrl)
     const response = await res.json()
     return {
