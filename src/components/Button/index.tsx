@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 
 export default function ButtonCustom({
@@ -18,7 +17,7 @@ export default function ButtonCustom({
                 className={`flex  justify-center gap-2 rounded-[10px] border border-[#132C92] bg-secondary px-3 py-2 font-neuBold tracking-wider text-white md:text-[16px] ${className} items-center transition-transform duration-300 hover:scale-105`}
             >
                 <div className="relative">
-                    <Image
+                    <img
                         src={src}
                         alt="user"
                         width={24}

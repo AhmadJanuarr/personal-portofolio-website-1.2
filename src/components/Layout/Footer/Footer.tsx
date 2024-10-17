@@ -35,7 +35,7 @@ export default function Footer() {
         <footer className="flex w-full flex-col py-10 text-[14px] md:flex-row">
             <div className="flex flex-col pb-10 pr-5 md:w-2/5">
                 <div className="mb-4 flex items-center">
-                    <Image
+                    <img
                         src="/img/picture.jpg"
                         alt="logo"
                         width={50}

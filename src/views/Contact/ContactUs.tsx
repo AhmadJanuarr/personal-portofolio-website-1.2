@@ -1,11 +1,10 @@
-import Image from "next/image"
 import SosialMediaIcon from "@/components/Icon"
 
 function ContactItem({ src, title }: { src: string; title: string }) {
     return (
         <li>
             <div className="flex items-center gap-2 tracking-wider">
-                <Image
+                <img
                     src={src}
                     alt="logo"
                     width={20}

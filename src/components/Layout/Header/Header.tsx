@@ -1,8 +1,7 @@
-import Image from "next/image"
-import { useState } from "react"
 import Link from "next/link"
 import NavList from "./NavList"
 import SosialMediaIcon from "../../Icon"
+import { useState } from "react"
 
 export default function Header() {
     const [open, setOpen] = useState(false)
@@ -24,7 +23,7 @@ export default function Header() {
                         onClick={toggleMenu}
                         className="cursor-pointer md:hidden"
                     >
-                        <Image
+                        <img
                             src={!open ? "/svg/Menu.svg" : "/svg/Multiply.svg"}
                             width={30}
                             height={30}

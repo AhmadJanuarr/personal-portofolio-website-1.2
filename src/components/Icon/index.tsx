@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { ICON_LIST } from "@/data/iconList"
 
 export default function SosialMediaIcon() {
@@ -11,7 +10,7 @@ export default function SosialMediaIcon() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Image
+                    <img
                         src={src}
                         alt={name}
                         width={30}

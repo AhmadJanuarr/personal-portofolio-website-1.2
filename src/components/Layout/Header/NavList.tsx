@@ -19,11 +19,10 @@ export default function NavList({
 
     return (
         <ul
-            className={`flex ${
-                isMobile
+            className={`flex ${isMobile
                     ? "flex-col items-center gap-5"
                     : "items-center gap-5 md:flex"
-            } text-[16px] md:py-2`}
+                } text-[16px] md:py-2`}
         >
             {NAV_ITEMS.map(({ id, name, link, color }) => (
                 <Link
@@ -37,7 +36,7 @@ export default function NavList({
                 </Link>
             ))}
             <li className="flex w-full cursor-pointer items-center justify-center px-2 py-3">
-                <Image
+                <img
                     src="/svg/Sun.svg"
                     width={35}
                     height={35}
