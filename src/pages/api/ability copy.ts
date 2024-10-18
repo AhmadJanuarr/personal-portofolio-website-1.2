@@ -1,24 +1,28 @@
-import { NextApiRequest, NextApiResponse } from "next"
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from "next"
 import { retriveData } from "@/lib/firebase/service"
-import { ProjectsType } from "@/types/projects.type"
+import { AbilityType } from "@/types/ability.type"
 
 type Data = {
     status: boolean
     statusCode: number
-    data: ProjectsType[]
+    data: AbilityType[]
 }
+
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>,
 ) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
     try {
-        const data = await retriveData("projects")
+        const data = await retriveData("dev")
+        console.log(data)
         res.status(200).json({
             status: true,
             statusCode: 200,
-            data: data.projects,
+            data: data.ability,
         })
     } catch (error) {
         if (error instanceof Error) {
