@@ -6,12 +6,8 @@ import Skill from "@/views/About/skill"
 import Experience from "@/views/About/experience"
 
 export async function getServerSideProps() {
-    const apiUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}/api/ability`
-        : "http://localhost:3000/api/ability"
 
-    console.log(apiUrl)
-    const res = await fetch(apiUrl)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/ability`)
     const response = await res.json()
     return {
         props: {
