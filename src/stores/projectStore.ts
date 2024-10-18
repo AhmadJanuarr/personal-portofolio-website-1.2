@@ -8,12 +8,13 @@ type ProjectState = {
 }
 
 export const useProjectStore = create<ProjectState>((set) => ({
+
     projects: [],
     isLoading: false,
     fetchProjects: async () => {
         set({ isLoading: true })
         try {
-            const res = await fetch("http://localhost:3000/api/projects")
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
             const response = await res.json()
             set({ projects: response.data })
         } catch (error) {
