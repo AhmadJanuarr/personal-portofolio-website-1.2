@@ -3,7 +3,6 @@ import Card from "@/components/Card"
 import SectionHeader from "@/components/Sections/SectionHeader"
 
 export default function SoftwareShowcase({ data }: { data: SoftwareType[] }) {
-    console.log(data)
     return (
         <div className="w-full">
             <SectionHeader heading="My Software" showButton={false}>
