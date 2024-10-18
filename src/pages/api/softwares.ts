@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { SoftwareType } from "@/types/software.type"
-import { retriveData } from "../../lib/firebase/service"
+import { retriveData } from "@/lib/firebase/service"
 
 type Data = {
     status: boolean
