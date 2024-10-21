@@ -1,21 +1,17 @@
 import Image from "next/image"
 import StarContainer from "./Star"
-import { useProjectStore } from "@/stores/projectStore"
-import { useEffect } from "react"
-import { ProjectsType } from "../../types/projects.type"
+import useSWR from "swr"
+import { ProjectsType } from "@/types/projects.type"
+import { fetching } from "@/lib/swr/fetch"
 
 export default function CardProject() {
-    const { projects, fetchProjects, isLoading } = useProjectStore()
-
-    useEffect(() => {
-        fetchProjects()
-    }, [fetchProjects])
-
+    const { data, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, fetching)
+    const projectData = data?.data || []
     return (
         <div className="w-full font-neuBook tracking-wider">
             {isLoading && <p className="text-[14px]">Loading...</p>}
 
-            {projects.map(
+            {projectData.map(
                 ({
                     id,
                     color,
@@ -24,7 +20,7 @@ export default function CardProject() {
                     star,
                     description,
                     date,
-                    technologies,
+
                 }: ProjectsType) => (
                     <div
                         key={id}
@@ -58,7 +54,7 @@ export default function CardProject() {
                                 {date}
                             </p>
 
-                            {technologies && (
+                            {/* {technologies && (
                                 <div className="hidden w-full gap-2 lg:flex">
                                     {technologies.map((tech) => (
                                         <div
@@ -71,7 +67,7 @@ export default function CardProject() {
                                         </div>
                                     ))}
                                 </div>
-                            )}
+                            )} */}
                         </div>
                     </div>
                 ),
