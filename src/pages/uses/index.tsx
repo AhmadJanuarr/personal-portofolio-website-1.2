@@ -1,29 +1,26 @@
-import { Container } from ".."
-import { SoftwareType } from "@/types/software.type"
-import Heading from "@/components/Layout/Heading"
-import SoftwareShowcase from "@/views/Uses/SoftwareShowcase"
-import EditorSetup from "@/views/Uses/EditorSetup"
-import BrowserSetup from "@/views/Uses/BrowserSetup"
+import { useEffect, useState } from 'react';
+import { Container } from "..";
+import { SoftwareType } from "@/types/software.type";
+import Heading from "@/components/Layout/Heading";
+import SoftwareShowcase from "@/views/Uses/SoftwareShowcase";
+import EditorSetup from "@/views/Uses/EditorSetup";
+import BrowserSetup from "@/views/Uses/BrowserSetup";
+import useSWR from 'swr';
+import { fetching } from '@/lib/swr/fetch';
 
-export async function getServerSideProps() {
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softwares`)
-    const response = await res.json()
-    return {
-        props: {
-            software: response.data,
-        },
-    }
-}
+export default function Uses() {
 
-export default function Uses({ software }: { software: SoftwareType[] }) {
+    const { data, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/softwares`, fetching)
+    const softwareData = data?.data || [];
+
     return (
         <Container>
             <Heading heading="What do I use?">
-                <SoftwareShowcase data={software} />
+                <SoftwareShowcase data={softwareData} isLoading={isLoading} />
                 <EditorSetup />
                 <BrowserSetup />
             </Heading>
         </Container>
-    )
+    );
 }

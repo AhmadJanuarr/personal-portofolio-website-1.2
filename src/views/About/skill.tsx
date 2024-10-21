@@ -1,7 +1,7 @@
 import { AbilityType } from "@/types/ability.type"
 import Card from "@/components/Card"
 
-export default function Skill({ ability }: { ability: AbilityType[] }) {
+export default function Skill({ ability, isLoading }: { ability: AbilityType[], isLoading: boolean }) {
     return (
         <div className="py-10">
             <h1 className="py-7 font-neuBold text-2xl">Skill</h1>

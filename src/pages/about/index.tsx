@@ -1,27 +1,22 @@
 import { Container } from ".."
-import { AbilityType } from "@/types/ability.type"
+import { fetching } from "@/lib/swr/fetch"
 import Introduce from "@/views/About/about"
 import Heading from "@/components/Layout/Heading"
 import Skill from "@/views/About/skill"
 import Experience from "@/views/About/experience"
+import useSWR from "swr"
 
-export async function getServerSideProps() {
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/ability`)
-    const response = await res.json()
-    return {
-        props: {
-            ability: response.data,
-        },
-    }
-}
+export default function About() {
 
-export default function About({ ability }: { ability: AbilityType[] }) {
+    const { data, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/ability`, fetching)
+    const abilityData = data?.data || []
+
     return (
         <Container>
             <Heading heading="About">
                 <Introduce />
-                <Skill ability={ability} />
+                <Skill ability={abilityData} isLoading={isLoading} />
                 <Experience />
             </Heading>
         </Container>
