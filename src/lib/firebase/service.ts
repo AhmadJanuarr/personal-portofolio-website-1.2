@@ -1,4 +1,4 @@
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
 import { app } from "./init";
 import { AbilityType } from "@/types/ability.type";
 import { ProjectsType } from "@/types/projects.type";
@@ -55,4 +55,22 @@ export async function retriveData(collectionName: string) {
     });
 
     return { ability, projects, softwareApp };
+}
+
+export async function retriveDataByName(collectionName: string, title: string) {
+    try {
+        const collectionRef = collection(firestore, collectionName);
+        const q = query(collectionRef, where("title", "==", title));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+            const data = querySnapshot.docs.map((doc) => doc.data());
+            return data;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error("Error fetching document:", error);
+        throw error;
+    }
 }
