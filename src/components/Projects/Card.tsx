@@ -3,10 +3,16 @@ import StarContainer from "./Star"
 import useSWR from "swr"
 import { ProjectsType } from "@/types/projects.type"
 import { fetching } from "@/lib/swr/fetch"
+import { useRouter } from "next/router"
+import Link from "next/link"
 
 export default function CardProject() {
-    const { data, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, fetching)
+    const { data, isLoading } = useSWR(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/projects`,
+        fetching,
+    )
     const projectData = data?.data || []
+
     return (
         <div className="w-full font-neuBook tracking-wider">
             {isLoading && <p className="text-[14px]">Loading...</p>}
@@ -20,12 +26,11 @@ export default function CardProject() {
                     star,
                     description,
                     date,
-
                 }: ProjectsType) => (
-                    <div
+                    <Link href={`projects/${title}`}
                         key={id}
                         style={{ "--color": color } as React.CSSProperties}
-                        className="group flex gap-3 rounded-lg py-3 pl-4 transition-all duration-75 hover:bg-[var(--color)] lg:py-4"
+                        className="group flex gap-3 rounded-lg py-3 pl-4 transition-all duration-75 hover:bg-[var(--color)] lg:py-4 cursor-pointer"
                     >
                         <div className="relative">
                             <Image
@@ -69,7 +74,7 @@ export default function CardProject() {
                                 </div>
                             )} */}
                         </div>
-                    </div>
+                    </Link>
                 ),
             )}
         </div>
