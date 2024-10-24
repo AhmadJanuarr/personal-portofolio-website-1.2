@@ -1,8 +1,7 @@
 import "@/styles/globals.css"
 import type { AppProps } from "next/app"
 import localFont from "next/font/local"
-import Header from "@/components/Layout/Header/Header"
-import Footer from "@/components/Layout/Footer/Footer"
+import Appshell from "../components/Layout/Appshell"
 
 const neuBold = localFont({
     src: "./fonts/PPNeueMontreal-Bold.woff",
@@ -28,12 +27,10 @@ const neuThin = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <main
-            className={`${neuBook.variable} ${neuBold.variable} ${neuMedium.variable} ${neuThin.variable} mx-auto h-full max-w-[800px] px-5 text-[#444444] lg:px-3`}
+        <Appshell
+            className={`${neuBook.variable} ${neuBold.variable} ${neuMedium.variable} ${neuThin.variable}`}
         >
-            <Header />
             <Component {...pageProps} />
-            <Footer />
-        </main>
+        </Appshell>
     )
 }
