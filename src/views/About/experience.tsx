@@ -1,6 +1,6 @@
 import Image from "next/image"
-import SectionHeader from "../../components/Sections/SectionHeader"
-import { LIST_EXPERIENCE } from "../../data/experience"
+import SectionHeader from "@/components/Sections/SectionHeader"
+import { LIST_EXPERIENCE } from "@/data/experience"
 
 function EpxrienceCard({
     title,
