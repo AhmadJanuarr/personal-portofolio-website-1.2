@@ -9,5 +9,10 @@ export interface ProjectsType {
     status?: string
     fullScreen?: string
     shots?: string[]
-    technologies?: string[]
+    technologies?: TechnologiesTypes[]
+}
+
+interface TechnologiesTypes {
+    name: string
+    icon: string
 }
