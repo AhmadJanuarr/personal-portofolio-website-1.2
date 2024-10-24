@@ -7,5 +7,7 @@ export interface ProjectsType {
     star: number
     image: string
     status?: string
+    fullScreen?: string
+    shots?: string[]
     technologies?: string[]
 }
