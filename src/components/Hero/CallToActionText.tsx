@@ -8,7 +8,7 @@ export function CallToActionText() {
                 <ButtonCustom
                     href="/about"
                     src="/svg/User.svg"
-                    className="w-full lg:w-auto "
+                    className="w-full lg:w-auto bg-secondary font-neuMedium text-white"
                 >
                     More about me
                 </ButtonCustom>
