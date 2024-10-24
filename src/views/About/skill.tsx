@@ -1,6 +1,6 @@
 import { AbilityType } from "@/types/ability.type"
 import Card from "@/components/Card"
-import Loading from "../../components/Loading"
+import Loading from "@/components/Loading"
 
 export default function Skill({
     ability,
