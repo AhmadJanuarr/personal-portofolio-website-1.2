@@ -46,11 +46,11 @@ export default function Footer() {
                         Ahmad Januar A
                     </p>
                 </div>
-                <p className="mb-2 font-neuBook text-[14px] tracking-wider">
+                <p className="mb-2 font-neuBook text-[13px] tracking-wider">
                     Hi, I am a Front End Developer who loves building beautiful,
                     responsive, and functional websites.
                 </p>
-                <p className="mb-4 font-neuBook text-[14px] tracking-wider">
+                <p className="mb-4 font-neuBook text-[13px] tracking-wider">
                     Ready to collaborate? Let&apos;s
                     <span className="font-neuBold text-secondary">
                         get in touch

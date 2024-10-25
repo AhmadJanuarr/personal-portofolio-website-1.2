@@ -31,7 +31,7 @@ export default function FooterColumn({
                                     : "_blank"
                             }
                         >
-                            <li className="mb-5 cursor-pointer font-neuBook text-[14px] tracking-wider text-[#444444] hover:underline">
+                            <li className="mb-5 cursor-pointer font-neuBook text-[13px] tracking-wider text-[#444444] hover:underline">
                                 {item}
                             </li>
                         </Link>
