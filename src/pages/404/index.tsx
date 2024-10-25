@@ -7,7 +7,7 @@ export default function NotFoundPage() {
         <Container>
             <div className="flex w-full flex-col items-center  gap-3 pb-32 pt-10 tracking-wider">
                 <Image
-                    src="/img/NotFound.png"
+                    src="/img/notFound.png"
                     width={386}
                     height={280}
                     alt="not found"
