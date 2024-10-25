@@ -29,13 +29,13 @@ function EpxrienceCard({
                 />
             </div>
             <div className="w-full ">
-                <h5 className="font-neuBold text-[12px] tracking-wider md:text-[16px]">
+                <h5 className="font-neuBold text-[13px] tracking-wider md:text-[16px]">
                     {title}
                 </h5>
-                <h1 className="text-[14px]s pt-1 font-neuBook tracking-wider md:text-[14px]">
+                <h1 className="text-[13px] pt-1 font-neuBook tracking-wider md:text-[14px]">
                     {company} • {type}
                 </h1>
-                <div className="w-full font-neuBook text-[12px] tracking-wider text-[#444444] md:text-[14px]">
+                <div className="w-full font-neuBook text-[13px] tracking-wider text-[#444444] md:text-[14px]">
                     {date} • {lenght}
                 </div>
             </div>

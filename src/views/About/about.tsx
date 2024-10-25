@@ -2,7 +2,7 @@ import Image from "next/image"
 import SosialMediaIcon from "@/components/Icon"
 
 function TextContent({ children }: { children: React.ReactNode }) {
-    return <p className="text-[14px] md:text-[16px]">{children}</p>
+    return <p className="text-[13px] md:text-[16px]">{children}</p>
 }
 
 function ProfileImage({
