@@ -1,6 +1,6 @@
 import Hero from "@/views/Home/Hero"
 import SectionHeader from "@/components/Sections/SectionHeader"
-import CardProject from "@/components/Projects/Card"
+import CardProject from "@/components/Card/Card"
 import BlogItem from "@/components/Blog/Item"
 
 export function Container({ children }: { children: React.ReactNode }) {
