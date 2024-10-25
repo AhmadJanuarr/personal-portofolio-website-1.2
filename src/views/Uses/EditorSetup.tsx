@@ -11,9 +11,9 @@ export function TextBlock({ heading, content, listItems }: TextBlockProps) {
     return (
         <div className="py-3">
             {heading && <h5 className="font-neuMedium">{heading}</h5>}
-            <p className="font-neuBook text-[14px] md:text-[16px]">{content}</p>
+            <p className="font-neuBook text-[13px] md:text-[16px]">{content}</p>
             {listItems && (
-                <ul className="list-disc pl-16 font-neuBook text-[14px] md:text-[16px] py-2 md:w-1/2">
+                <ul className="list-disc pl-16 font-neuBook text-[13px] md:text-[16px] py-2 md:w-1/2">
                     {listItems.map((item, index) => (
                         <li
                             key={index}
