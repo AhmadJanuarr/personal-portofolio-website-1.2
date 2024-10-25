@@ -1,7 +1,7 @@
 import React from "react"
-import Card from "@/components/Card"
 import SectionHeader from "@/components/Sections/SectionHeader"
-import Loading from "@/components/Loading"
+import IconBox from "@/components/IconBox"
+import SkeletonIconBox from "@/components/Skeleton/SkeletonIconBox"
 import { SoftwareType } from "@/types/software.type"
 
 export default function SoftwareShowcase({
@@ -18,7 +18,7 @@ export default function SoftwareShowcase({
                     {!isLoading ? (
                         <React.Fragment>
                             {data.map(({ id, name, url, icon, color }) => (
-                                <Card
+                                <IconBox
                                     key={id}
                                     url={url || "#"}
                                     icon={icon}
@@ -28,7 +28,7 @@ export default function SoftwareShowcase({
                             ))}
                         </React.Fragment>
                     ) : (
-                        <Loading />
+                        <SkeletonIconBox />
                     )}
                 </div>
             </SectionHeader>

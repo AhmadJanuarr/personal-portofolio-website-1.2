@@ -1,4 +1,3 @@
-import Image from "next/image"
 import FooterColumn from "./FooterColumn"
 import SosialMediaIcon from "../../Icon"
 import ButtonCustom from "../../Button"

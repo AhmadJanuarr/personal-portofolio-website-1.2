@@ -1,6 +1,6 @@
+import IconBox from "@/components/IconBox"
+import SkeletonIconBox from "@/components/Skeleton/SkeletonIconBox"
 import { AbilityType } from "@/types/ability.type"
-import Card from "@/components/Card"
-import Loading from "@/components/Loading"
 
 export default function Skill({
     ability,
@@ -16,7 +16,7 @@ export default function Skill({
                 {!isLoading ? (
                     <>
                         {ability.map(({ id, name, url, icon, color }) => (
-                            <Card
+                            <IconBox
                                 key={id}
                                 url={url || "#"}
                                 icon={icon}
@@ -26,7 +26,7 @@ export default function Skill({
                         ))}
                     </>
                 ) : (
-                    <Loading />
+                    <SkeletonIconBox />
                 )}
             </div>
         </div>
