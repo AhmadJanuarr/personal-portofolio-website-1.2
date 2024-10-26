@@ -28,7 +28,7 @@ export function HeaderProjectsDetail() {
                 </ButtonCustom>
                 <ButtonCustom
                     href="#"
-                    src="/svg/Github.svg"
+                    src="/svg/GitHub.svg"
                     className="border-[#D9D9D9] bg-[#FAFAFA] font-neuMedium text-[11px]"
                 >
                     Github
