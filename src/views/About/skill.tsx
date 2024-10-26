@@ -1,6 +1,7 @@
 import IconBox from "@/components/IconBox"
 import SkeletonIconBox from "@/components/Skeleton/SkeletonIconBox"
 import { AbilityType } from "@/types/ability.type"
+import SectionHeader from "../../components/Sections/SectionHeader"
 
 export default function Skill({
     ability,
@@ -11,24 +12,25 @@ export default function Skill({
 }) {
     return (
         <div className="py-10">
-            <h1 className="py-7 font-neuBold text-2xl">Skill</h1>
-            <div className="flex w-full flex-wrap gap-3">
-                {!isLoading ? (
-                    <>
-                        {ability.map(({ id, name, url, icon, color }) => (
-                            <IconBox
-                                key={id}
-                                url={url || "#"}
-                                icon={icon}
-                                name={name}
-                                color={color}
-                            />
-                        ))}
-                    </>
-                ) : (
-                    <SkeletonIconBox />
-                )}
-            </div>
+            <SectionHeader heading="My Skills" showButton={false}>
+                <div className="flex w-full flex-wrap gap-3">
+                    {!isLoading ? (
+                        <>
+                            {ability.map(({ id, name, url, icon, color }) => (
+                                <IconBox
+                                    key={id}
+                                    url={url || "#"}
+                                    icon={icon}
+                                    name={name}
+                                    color={color}
+                                />
+                            ))}
+                        </>
+                    ) : (
+                        <SkeletonIconBox />
+                    )}
+                </div>
+            </SectionHeader>
         </div>
     )
 }
