@@ -39,7 +39,7 @@ function ContactInfo() {
                 />
             </ul>
             <div className="flex flex-col gap-2 pt-5">
-                <h5 className="font-neuBold text-[16px]">Get in touch</h5>
+                <h5 className="py-5 font-neuBold text-[16px]">Get in touch</h5>
                 <SosialMediaIcon />
             </div>
         </div>
