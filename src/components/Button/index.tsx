@@ -14,7 +14,7 @@ export default function ButtonCustom({
     return (
         <Link href={href}>
             <button
-                className={`flex justify-center gap-2 rounded-[10px] border px-2 md:px-3 md:py-2 py-1  md:text-[16px] ${className} items-center transition-transform duration-300 hover:scale-105`}
+                className={`flex justify-center gap-2 rounded-[10px] border px-2 py-1 md:px-3 md:py-2  md:text-[16px] ${className} items-center transition-transform duration-300 hover:scale-105`}
             >
                 <div className="relative">
                     <img

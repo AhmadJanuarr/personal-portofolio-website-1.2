@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next"
 import { retriveData } from "@/lib/firebase/service"
 import { AbilityType } from "@/types/ability.type"
@@ -18,7 +17,6 @@ export default async function handler(
 
     try {
         const data = await retriveData("dev")
-        console.log(data)
         res.status(200).json({
             status: true,
             statusCode: 200,

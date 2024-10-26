@@ -6,10 +6,11 @@ import Skill from "@/views/About/skill"
 import Experience from "@/views/About/experience"
 import useSWR from "swr"
 
-
 export default function About() {
-
-    const { data, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/ability`, fetching)
+    const { data, isLoading } = useSWR(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/ability`,
+        fetching,
+    )
     const abilityData = data?.data || []
 
     return (

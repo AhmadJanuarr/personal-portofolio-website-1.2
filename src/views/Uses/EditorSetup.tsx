@@ -13,12 +13,12 @@ export function TextBlock({ heading, content, listItems }: TextBlockProps) {
             {heading && <h5 className="font-neuMedium">{heading}</h5>}
             <p className="font-neuBook text-[13px] md:text-[16px]">{content}</p>
             {listItems && (
-                <ul className="list-disc pl-16 font-neuBook text-[13px] md:text-[16px] py-2 md:w-1/2">
+                <ul className="list-disc py-2 pl-16 font-neuBook text-[13px] md:w-1/2 md:text-[16px]">
                     {listItems.map((item, index) => (
                         <li
                             key={index}
                             className={
-                                "font-neuMedium text-secondary underline underline-offset-4 cursor-pointer py-1 hover:text-[#444444]"
+                                "cursor-pointer py-1 font-neuMedium text-secondary underline underline-offset-4 hover:text-[#444444]"
                             }
                         >
                             {item}

@@ -16,7 +16,6 @@ export default async function handler(
 
     try {
         const projectTitle = req.query.projects ? req.query.projects[1] : null
-        console.log(projectTitle)
         if (projectTitle) {
             const data = await retriveDataByName("projects", projectTitle)
             if (data) {
