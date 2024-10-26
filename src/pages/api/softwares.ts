@@ -11,8 +11,8 @@ export default async function Handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>,
 ) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization")
     try {
         const data = await retriveData("software")
         res.status(200).json({

@@ -12,8 +12,8 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>,
 ) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization")
 
     try {
         const data = await retriveData("dev")
@@ -24,9 +24,9 @@ export default async function handler(
         })
     } catch (error) {
         if (error instanceof Error) {
-            console.error("Error fetching data: ", error.message);
+            console.error("Error fetching data: ", error.message)
         } else {
-            console.error("Error fetching data: ", error);
+            console.error("Error fetching data: ", error)
         }
         res.status(500).json({ status: false, statusCode: 500, data: [] })
     }

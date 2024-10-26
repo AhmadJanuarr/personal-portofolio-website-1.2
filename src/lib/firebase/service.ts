@@ -1,20 +1,28 @@
-import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
-import { app } from "./init";
-import { AbilityType } from "@/types/ability.type";
-import { ProjectsType } from "@/types/projects.type";
-import { SoftwareType } from "@/types/software.type";
+import {
+    collection,
+    doc,
+    getDoc,
+    getDocs,
+    getFirestore,
+    query,
+    where,
+} from "firebase/firestore"
+import { app } from "./init"
+import { AbilityType } from "@/types/ability.type"
+import { ProjectsType } from "@/types/projects.type"
+import { SoftwareType } from "@/types/software.type"
 
-const firestore = getFirestore(app);
+const firestore = getFirestore(app)
 
 export async function retriveData(collectionName: string) {
-    const snapshot = await getDocs(collection(firestore, collectionName));
+    const snapshot = await getDocs(collection(firestore, collectionName))
 
-    const ability: AbilityType[] = [];
-    const projects: ProjectsType[] = [];
-    const softwareApp: SoftwareType[] = [];
+    const ability: AbilityType[] = []
+    const projects: ProjectsType[] = []
+    const softwareApp: SoftwareType[] = []
 
     snapshot.docs.forEach((doc) => {
-        const data = doc.data();
+        const data = doc.data()
 
         // Map Ability
         if (data.name && data.url && data.icon && data.color) {
@@ -24,11 +32,20 @@ export async function retriveData(collectionName: string) {
                 url: data.url,
                 icon: data.icon,
                 color: data.color,
-            } as AbilityType);
+            } as AbilityType)
         }
 
         // Map Projects
-        if (data.title && data.description && data.star && data.date && data.image && data.color && data.status && data.technologies) {
+        if (
+            data.title &&
+            data.description &&
+            data.star &&
+            data.date &&
+            data.image &&
+            data.color &&
+            data.status &&
+            data.technologies
+        ) {
             projects.push({
                 id: doc.id,
                 title: data.title,
@@ -39,7 +56,7 @@ export async function retriveData(collectionName: string) {
                 color: data.color,
                 status: data.status,
                 technologies: data.technologies,
-            } as ProjectsType);
+            } as ProjectsType)
         }
 
         // Map Software
@@ -50,27 +67,27 @@ export async function retriveData(collectionName: string) {
                 icon: data.icon,
                 color: data.color,
                 url: data.url,
-            } as SoftwareType);
+            } as SoftwareType)
         }
-    });
+    })
 
-    return { ability, projects, softwareApp };
+    return { ability, projects, softwareApp }
 }
 
 export async function retriveDataByName(collectionName: string, title: string) {
     try {
-        const collectionRef = collection(firestore, collectionName);
-        const q = query(collectionRef, where("title", "==", title));
-        const querySnapshot = await getDocs(q);
+        const collectionRef = collection(firestore, collectionName)
+        const q = query(collectionRef, where("title", "==", title))
+        const querySnapshot = await getDocs(q)
 
         if (!querySnapshot.empty) {
-            const data = querySnapshot.docs.map((doc) => doc.data());
-            return data;
+            const data = querySnapshot.docs.map((doc) => doc.data())
+            return data
         } else {
-            return null;
+            return null
         }
     } catch (error) {
-        console.error("Error fetching document:", error);
-        throw error;
+        console.error("Error fetching document:", error)
+        throw error
     }
 }
