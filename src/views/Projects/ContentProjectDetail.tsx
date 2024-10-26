@@ -1,6 +1,10 @@
 import Card from "@/components/IconBox"
 import { ProjectsType } from "@/types/projects.type"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+function ArrowTop() {
+    return <img src="/svg/Double Up.svg" alt="Double Up" className="h-5 w-5" />
+}
 
 function ImageSelected({
     src,
@@ -48,7 +52,26 @@ export function ContentProjectDetail({
     detailsProjects: ProjectsType
 }) {
     const [current, setCurrent] = useState(0)
-
+    const [showButton, setShowButton] = useState(false)
+    const handleScroll = () => {
+        if (window.scrollY > 100) {
+            setShowButton(true)
+        } else {
+            setShowButton(false)
+        }
+    }
+    const scrollTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        })
+    }
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    })
     return (
         <div className="w-full px-4 md:py-10">
             <img
@@ -67,7 +90,6 @@ export function ContentProjectDetail({
                     current={current}
                     shots={detailsProjects?.shots || []}
                 />
-
                 <div className="flex w-full gap-3 py-4">
                     {detailsProjects?.shots?.map((shot, index) => (
                         <ImageSelected
@@ -81,18 +103,16 @@ export function ContentProjectDetail({
                 </div>
             </div>
             <div className="flex flex-col">
-                <h1 className="py-8 font-neuBold text-[18px]">
+                <h5 className="py-8 font-neuBold text-[18px]">
                     {detailsProjects?.title}
-                </h1>
-                <p className="py-2 font-neuMedium text-[14px] md:text-[16px]">
+                </h5>
+                <p className="paragraph py-2 font-neuMedium">
                     Project Description
                 </p>
                 <p className="pb-2 font-neuBook text-[13px] md:text-[16px]">
                     {detailsProjects?.description}
                 </p>
-                <p className="py-2 font-neuMedium text-[14px] md:text-[16px]">
-                    Tech Stack Used
-                </p>
+                <p className="paragraph py-2 font-neuMedium">Tech Stack Used</p>
                 <div className="flex w-full flex-wrap gap-2 py-2 pb-10">
                     {detailsProjects?.technologies?.map((item, index) => (
                         <Card
@@ -103,6 +123,14 @@ export function ContentProjectDetail({
                             color="#7E60BF"
                         />
                     ))}
+                </div>
+                <div className="w-full">
+                    <button
+                        onClick={scrollTop}
+                        className={`${showButton ? "-translate-x-4" : "translate-x-24"} fixed -right-0 bottom-5 flex h-14 w-14  items-center justify-center rounded-full bg-secondary transition-all duration-200`}
+                    >
+                        <ArrowTop />
+                    </button>
                 </div>
             </div>
         </div>
