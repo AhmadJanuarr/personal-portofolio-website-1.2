@@ -11,9 +11,9 @@ export default function SkeletonCard({ lenght }: { lenght: number }) {
                         role="status"
                         className="mb-8 mt-5 flex animate-pulse space-x-8 md:flex md:items-center md:space-y-0 rtl:space-x-reverse"
                     >
-                        <div className="flex h-[60px] w-[60px] items-center justify-center rounded bg-gray-300 md:h-[100px] md:w-[120px] dark:bg-gray-700">
+                        <div className="flex h-[60px] w-[80px] items-center justify-center rounded bg-gray-300 md:h-[100px] md:w-[120px] dark:bg-gray-700">
                             <svg
-                                className="h-10 w-10 text-gray-200 dark:text-gray-600"
+                                className="h-14 w-24 text-gray-200 dark:text-gray-600"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor"
