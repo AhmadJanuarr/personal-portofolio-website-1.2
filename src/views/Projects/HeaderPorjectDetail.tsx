@@ -1,13 +1,13 @@
-import ButtonCustom from "@/components/Button";
+import ButtonCustom from "@/components/Button"
 
 export function HeaderProjectsDetail() {
     return (
-        <div className="flex w-full justify-between sticky top-0 left-0 bg-white border-b-2 py-5">
+        <div className="sticky left-0 top-0 flex w-full justify-between bg-white py-2">
             <div className="flex items-center gap-3 pl-4">
                 <img
                     src="/img/picture.jpg"
                     alt="my image"
-                    className="rounded-full w-[40px] h-[40px] md:w-[60px] md:h-[60px] "
+                    className="h-[40px] w-[40px] rounded-full md:h-[60px] md:w-[60px] "
                 />
                 <div className="flex flex-col">
                     <p className="font-neuMedium text-[12px] md:text-[16px]">
@@ -18,11 +18,11 @@ export function HeaderProjectsDetail() {
                     </p>
                 </div>
             </div>
-            <div className="flex items-center md:justify-start gap-2 md:gap-5 py-5  md:py-0 pr-4">
+            <div className="flex items-center gap-2 py-5 pr-4 md:justify-start  md:gap-5 md:py-0">
                 <ButtonCustom
                     href="#"
                     src="/svg/Touch.svg"
-                    className="bg-secondary font-neuMedium text-white text-[11px]"
+                    className="bg-secondary font-neuMedium text-[11px] text-white"
                 >
                     Demo
                 </ButtonCustom>

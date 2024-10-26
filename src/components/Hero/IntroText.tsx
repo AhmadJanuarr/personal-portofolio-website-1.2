@@ -1,7 +1,7 @@
 export default function IntroText() {
     return (
         <div className="w-full font-neuBook">
-            <div className="max-w-[280px] text-[14px]  tracking-wider md:text-[16px] lg:max-w-[650px]">
+            <div className="paragraph max-w-[280px] tracking-wider lg:max-w-[650px]">
                 <p>
                     👋 Hi, I&apos;m{" "}
                     <span className="text-secondary">

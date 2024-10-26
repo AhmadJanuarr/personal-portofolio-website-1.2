@@ -19,7 +19,7 @@ function EpxrienceCard({
 }) {
     return (
         <div className="flex w-full items-center gap-5 py-8">
-            <div className="relative  items-center rounded-lg bg-gray-200 p-2">
+            <div className="relative items-center rounded-lg bg-gray-200 p-2">
                 <Image
                     src={logo}
                     alt="logo"
@@ -28,13 +28,11 @@ function EpxrienceCard({
                     className="w-full rounded-lg object-cover"
                 />
             </div>
-            <div className="w-full ">
-                <h5 className="font-neuBold text-[13px] tracking-wider md:text-[16px]">
-                    {title}
-                </h5>
-                <h1 className="text-[13px] pt-1 font-neuBook tracking-wider md:text-[14px]">
+            <div className="w-full tracking-wider">
+                <p className="paragraph font-neuBold">{title}</p>
+                <p className="paragraph pt-1 font-neuBook">
                     {company} • {type}
-                </h1>
+                </p>
                 <div className="w-full font-neuBook text-[13px] tracking-wider text-[#444444] md:text-[14px]">
                     {date} • {lenght}
                 </div>

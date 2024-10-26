@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 
 const NAV_ITEMS = [
@@ -15,14 +14,13 @@ export default function NavList({
     isMobile: boolean
     toggleMenu?: () => void
 }) {
-    // const headerActive = useRouter()
-
     return (
         <ul
-            className={`flex ${isMobile
+            className={`flex ${
+                isMobile
                     ? "flex-col items-center gap-5"
                     : "items-center gap-5 md:flex"
-                } text-[16px] md:py-2`}
+            } text-[16px] md:py-2`}
         >
             {NAV_ITEMS.map(({ id, name, link, color }) => (
                 <Link

@@ -32,11 +32,13 @@ export default function GetProjectByName() {
             <div className="w-full max-w-[800px]">
                 {!isLoading ? (
                     <div className="w-full tracking-wider">
-                        <h1 className="py-5 font-neuBold text-[18px] md:text-3xl">
+                        <h1 className="px-4 py-5 font-neuBold text-[18px] md:text-3xl">
                             {detailsProjects?.title}
                         </h1>
                         <HeaderProjectsDetail />
-                        <ContentProjectDetail detailsProjects={detailsProjects} />
+                        <ContentProjectDetail
+                            detailsProjects={detailsProjects}
+                        />
                     </div>
                 ) : (
                     <SkeletonDetail />
