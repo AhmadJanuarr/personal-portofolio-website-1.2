@@ -1,4 +1,4 @@
-<img src="/img/portofolio.png"/>
+<img src="img/portofolio.png"/>
 
 # 🎨 Portofolio Website
 
