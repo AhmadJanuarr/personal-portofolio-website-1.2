@@ -1,9 +1,10 @@
 {
-    "tabWidth": 4,
-    "useTabs": false,
-    "semi": false,
-    "plugins": ["prettier-plugin-tailwindcss"],
-    "tailwindPreserveDuplicates": true,
-    "tailwindPreserveWhitespace": true,
-    "tailwindConfig": "tailwind.config.ts"
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindPreserveDuplicates": true,
+  "tailwindPreserveWhitespace": true,
+  "tailwindConfig": "tailwind.config.ts"
 }

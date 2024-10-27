@@ -22,4 +22,4 @@
 - **LinkedIn**: [Ahmad Januar Amriyansah](https://linkedin.com/in/ahmad-januar)
 - **Email**: ahmadjanuaramri@gmail.com
 
-Thank you for visiting my portfolio! If you have any suggestions, feedback, or would like to collaborate, please feel free to contact me.
+Thank you for visiting my portfolio! If you have any suggestions, feedback, or would like to collaborate, please feel free to contact me.s

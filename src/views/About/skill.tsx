@@ -3,13 +3,7 @@ import SkeletonIconBox from "@/components/Skeleton/SkeletonIconBox"
 import { AbilityType } from "@/types/ability.type"
 import SectionHeader from "../../components/Sections/SectionHeader"
 
-export default function Skill({
-    ability,
-    isLoading,
-}: {
-    ability: AbilityType[]
-    isLoading: boolean
-}) {
+export default function Skill({ ability, isLoading }: { ability: AbilityType[]; isLoading: boolean }) {
     return (
         <div className="py-10">
             <SectionHeader heading="My Skills" showButton={false}>
@@ -17,13 +11,7 @@ export default function Skill({
                     {!isLoading ? (
                         <>
                             {ability.map(({ id, name, url, icon, color }) => (
-                                <IconBox
-                                    key={id}
-                                    url={url || "#"}
-                                    icon={icon}
-                                    name={name}
-                                    color={color}
-                                />
+                                <IconBox key={id} url={url || "#"} icon={icon} name={name} color={color} />
                             ))}
                         </>
                     ) : (

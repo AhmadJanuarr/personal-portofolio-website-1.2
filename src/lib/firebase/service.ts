@@ -1,12 +1,4 @@
-import {
-    collection,
-    doc,
-    getDoc,
-    getDocs,
-    getFirestore,
-    query,
-    where,
-} from "firebase/firestore"
+import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore"
 import { app } from "./init"
 import { AbilityType } from "@/types/ability.type"
 import { ProjectsType } from "@/types/projects.type"

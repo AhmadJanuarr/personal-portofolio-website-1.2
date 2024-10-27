@@ -10,12 +10,8 @@ export function HeaderProjectsDetail() {
                     className="h-[40px] w-[40px] rounded-full md:h-[60px] md:w-[60px] "
                 />
                 <div className="flex flex-col">
-                    <p className="font-neuMedium text-[12px] md:text-[16px]">
-                        Ahmad Januar A
-                    </p>
-                    <p className="font-neuBook text-[11px] text-secondary md:text-[15px]">
-                        Available for work
-                    </p>
+                    <p className="font-neuMedium text-[12px] md:text-[16px]">Ahmad Januar A</p>
+                    <p className="font-neuBook text-[11px] text-secondary md:text-[15px]">Available for work</p>
                 </div>
             </div>
             <div className="flex items-center gap-2 py-5 pr-4 md:justify-start  md:gap-5 md:py-0">

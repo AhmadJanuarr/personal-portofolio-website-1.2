@@ -11,8 +11,7 @@ export const BLOG_ITEMS = [
     {
         id: 2,
         title: "Understanding TypeScript: A Beginner's Guide",
-        description:
-            "Learn the fundamentals of TypeScript and why it's becoming essential for modern web development.",
+        description: "Learn the fundamentals of TypeScript and why it's becoming essential for modern web development.",
         dateCreated: "2024-09-25",
         imageUrl: "/img/blog2.webp",
         views: 950,
@@ -20,8 +19,7 @@ export const BLOG_ITEMS = [
     {
         id: 3,
         title: "How to Build a Scalable React Application",
-        description:
-            "Tips and best practices for building scalable and maintainable React applications in 2024.",
+        description: "Tips and best practices for building scalable and maintainable React applications in 2024.",
         dateCreated: "2024-09-18",
         imageUrl: "/img/blog3.webp",
         views: 1875,
@@ -29,8 +27,7 @@ export const BLOG_ITEMS = [
     {
         id: 4,
         title: "The Ultimate Guide to Web Performance Optimization",
-        description:
-            "Step-by-step techniques to improve website performance and ensure a smooth user experience.",
+        description: "Step-by-step techniques to improve website performance and ensure a smooth user experience.",
         dateCreated: "2024-08-30",
         imageUrl: "/img/blog4.webp",
         views: 2150,
@@ -47,8 +44,7 @@ export const BLOG_ITEMS = [
     {
         id: 6,
         title: "Mastering CSS Grid and Flexbox for Responsive Design",
-        description:
-            "An in-depth guide to mastering CSS Grid and Flexbox to create responsive and modern web layouts.",
+        description: "An in-depth guide to mastering CSS Grid and Flexbox to create responsive and modern web layouts.",
         dateCreated: "2024-08-20",
         imageUrl: "/img/blog1.webp",
         views: 1350,
@@ -83,8 +79,7 @@ export const BLOG_ITEMS = [
     {
         id: 10,
         title: "SEO Best Practices for Web Developers in 2024",
-        description:
-            "Optimize your website for search engines with the latest SEO strategies and best practices.",
+        description: "Optimize your website for search engines with the latest SEO strategies and best practices.",
         dateCreated: "2024-09-28",
         imageUrl: "/img/blog1.webp",
         views: 1950,

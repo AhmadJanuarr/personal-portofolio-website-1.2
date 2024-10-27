@@ -20,13 +20,7 @@ function EpxrienceCard({
     return (
         <div className="flex w-full items-center gap-5 py-8">
             <div className="relative items-center rounded-lg bg-gray-200 p-2">
-                <Image
-                    src={logo}
-                    alt="logo"
-                    width={70}
-                    height={70}
-                    className="w-full rounded-lg object-cover"
-                />
+                <Image src={logo} alt="logo" width={70} height={70} className="w-full rounded-lg object-cover" />
             </div>
             <div className="w-full tracking-wider">
                 <p className="paragraph font-neuBold">{title}</p>
@@ -43,16 +37,8 @@ function EpxrienceCard({
 
 export default function Experience() {
     return (
-        <SectionHeader
-            heading="Experience"
-            title="Resume"
-            href="/resume"
-            showButton={true}
-        >
-            {LIST_EXPERIENCE &&
-                LIST_EXPERIENCE.map((item) => (
-                    <EpxrienceCard key={item.id} {...item} />
-                ))}
+        <SectionHeader heading="Experience" title="Resume" href="/resume" showButton={true}>
+            {LIST_EXPERIENCE && LIST_EXPERIENCE.map((item) => <EpxrienceCard key={item.id} {...item} />)}
         </SectionHeader>
     )
 }

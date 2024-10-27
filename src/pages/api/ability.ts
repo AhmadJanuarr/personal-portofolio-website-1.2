@@ -8,10 +8,7 @@ type Data = {
     data: AbilityType[]
 }
 
-export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse<Data>,
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
     res.setHeader("Access-Control-Allow-Origin", "*")
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization")
 
