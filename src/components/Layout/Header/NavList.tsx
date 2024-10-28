@@ -12,17 +12,18 @@ export default function NavList({ isMobile, toggleMenu }: { isMobile: boolean; t
     <ul
       className={`flex ${isMobile ? "flex-col items-center gap-5" : "items-center gap-5 md:flex"} text-[16px] md:py-2`}
     >
-      {NAV_ITEMS.map(({ id, name, link, color }) => (
-        <Link
-          key={id}
-          href={link}
-          style={{ "--color": color } as React.CSSProperties}
-          className="w-full cursor-pointer rounded-lg px-2 py-3 text-center transition-all duration-75 hover:bg-[var(--color)] hover:text-[#375ACB]"
-          onClick={toggleMenu}
-        >
-          <li>{name}</li>
-        </Link>
-      ))}
+      {NAV_ITEMS &&
+        NAV_ITEMS.map(({ id, name, link, color }) => (
+          <Link
+            key={id}
+            href={link}
+            style={{ "--color": color } as React.CSSProperties}
+            className="w-full cursor-pointer rounded-lg px-2 py-3 text-center transition-all duration-75 hover:bg-[var(--color)] hover:text-[#375ACB]"
+            onClick={toggleMenu}
+          >
+            <li>{name}</li>
+          </Link>
+        ))}
       <li className="flex w-full cursor-pointer items-center justify-center px-2 py-3">
         <img src="/svg/Sun.svg" width={35} height={35} alt="sun" className="h-auto w-auto" />
       </li>
