@@ -21,7 +21,7 @@ export default function GetProjectByName() {
         {!isLoading ? (
           <div className="w-full tracking-wider">
             <h1 className="px-4 py-5 font-neuBold text-[18px] md:text-3xl">{detailsProjects?.title}</h1>
-            <HeaderProjectsDetail />
+            <HeaderProjectsDetail demo={detailsProjects?.demo} github={detailsProjects?.github} />
             <ContentProjectDetail detailsProjects={detailsProjects} />
           </div>
         ) : (

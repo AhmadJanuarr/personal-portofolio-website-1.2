@@ -4,6 +4,8 @@ export interface ProjectsType {
     date: string
     color: string
     description: string
+    demo: string
+    github: string
     star: number
     image: string
     status?: string
