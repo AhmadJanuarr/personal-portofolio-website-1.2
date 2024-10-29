@@ -5,16 +5,19 @@ export default function ButtonCustom({
   src,
   className = "bg-secondary border-[#132C92] text-white font-neuBold",
   href,
+  onClick,
 }: {
   src: string
   className?: string
   href: string
   children: React.ReactNode
+  onClick?: () => void
 }) {
   return (
     <Link href={href}>
       <button
-        className={`flex justify-center gap-2 rounded-[10px] border px-2 py-1 md:px-3 md:py-2  md:text-[16px] ${className} items-center transition-transform duration-300 hover:scale-105`}
+        onClick={onClick}
+        className={`flex justify-center gap-2 rounded-[10px] border px-2 py-1 md:px-3 md:py-2  md:text-[16px] ${className} items-center tracking-wider transition-transform duration-300 hover:scale-105`}
       >
         <div className="relative">
           <img

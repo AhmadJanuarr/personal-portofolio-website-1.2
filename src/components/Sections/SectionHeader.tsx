@@ -6,12 +6,14 @@ export default function SectionHeader({
   href = " ",
   children,
   showButton,
+  onClick,
 }: {
   heading: string
   title?: string
   href?: string
   showButton: boolean
   children: React.ReactNode
+  onClick?: () => void
 }) {
   return (
     <div className="w-full lg:mt-14">
@@ -20,7 +22,7 @@ export default function SectionHeader({
           <h1 className="relative font-neuBold text-[18px] lg:text-[22px]">{heading}</h1>
         </span>
         {showButton && (
-          <ButtonCustom src="/svg/Arrow.svg" href={href}>
+          <ButtonCustom src="/svg/Arrow.svg" href={href} onClick={onClick}>
             {title}
           </ButtonCustom>
         )}
