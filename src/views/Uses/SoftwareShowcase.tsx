@@ -7,7 +7,7 @@ import { SoftwareType } from "@/types/software.type"
 export default function SoftwareShowcase({ data, isLoading }: { data: SoftwareType[]; isLoading: boolean }) {
   return (
     <div className="w-full">
-      <SectionHeader heading="My Software" showButton={false}>
+      <SectionHeader heading="📱 My Software" showButton={false}>
         <div className="flex w-full flex-wrap gap-3">
           {!isLoading ? (
             <React.Fragment>
