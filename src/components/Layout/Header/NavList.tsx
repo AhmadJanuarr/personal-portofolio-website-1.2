@@ -18,7 +18,7 @@ export default function NavList({ isMobile, toggleMenu }: { isMobile: boolean; t
             key={id}
             href={link}
             style={{ "--color": color } as React.CSSProperties}
-            className={` w-full cursor-pointer rounded-lg px-2 py-3 text-center transition-all duration-75 hover:bg-[var(--color)] hover:text-secondary  focus:ring focus:ring-secondary active:bg-[var(--color)] `}
+            className={`w-full cursor-pointer rounded-lg px-2 py-3 text-center transition-all duration-75 hover:bg-[var(--color)] hover:text-secondary  focus:ring focus:ring-secondary active:bg-[var(--color)]`}
             onClick={toggleMenu}
           >
             <li>{name}</li>
