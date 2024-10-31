@@ -77,7 +77,9 @@ export function ContentProjectDetail({ detailsProjects }: { detailsProjects: Pro
 
   return (
     <div className="w-full px-4 md:py-10">
-      {isPopupOpen && <PopupImage src={detailsProjects.shots[current]} onClose={() => setIsPopupOpen(false)} />}
+      {isPopupOpen && detailsProjects.shots?.[current] && (
+        <PopupImage src={detailsProjects.shots[current]} onClose={() => setIsPopupOpen(false)} />
+      )}
 
       <img src={detailsProjects?.fullScreen || ""} className="w-full rounded-xl px-2 pt-5" />
       <div className="w-full">
