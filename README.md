@@ -11,7 +11,7 @@
 ## 💻 Technology Used
 
 - **JavaScript / TypeScript**
-- **Next.js**
+- **Next.js (14.2.14)**
 - **React Hooks** - `useState`, `useEffect`, `useContext`, `useReducer`
 - **Tailwind CSS**
 - **Firebase**
