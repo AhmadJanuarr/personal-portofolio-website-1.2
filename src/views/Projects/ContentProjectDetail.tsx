@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Card from "@/components/IconBox"
 import { ProjectsType } from "@/types/projects.type"
 import { useEffect, useState } from "react"
@@ -30,15 +29,15 @@ function ImageSelected({
 function ImageShot({ shots, current, onClick }: { shots: string[]; current: number; onClick: () => void }) {
   return (
     <div className="relative overflow-hidden">
-      <div className="flex transition duration-300 ease-out" style={{ transform: `translateX(-${current * 100}%)` }}>
+      <div className="flex transition duration-300 ease-in-out" style={{ transform: `translateX(-${current * 100}%)` }}>
         {shots.map((shot, index) => (
           <img
             key={index}
             src={shot}
             alt="image"
-            className="w-full rounded-lg object-cover object-top hover:scale-110"
+            className="w-full rounded-lg object-cover object-top transition-all duration-300 hover:scale-105 "
             loading="lazy"
-            onClick={onClick} // Opens popup when image is clicked
+            onClick={onClick}
           />
         ))}
       </div>
@@ -50,7 +49,7 @@ function PopupImage({ src, onClose }: { src: string; onClose: () => void }) {
   return (
     <div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-80">
       <button onClick={onClose} className="absolute right-5 top-5 z-20 text-2xl font-bold text-white">
-        X
+        ✕
       </button>
       <img src={src} alt="image" className="max-h-full max-w-full rounded-lg object-cover" />
     </div>
@@ -86,11 +85,7 @@ export function ContentProjectDetail({ detailsProjects }: { detailsProjects: Pro
         <h1 className={`font-neuBold text-[18px] md:text-[28px] ${detailsProjects?.fullScreen ? "py-28" : "py-10"}`}>
           Results from the upcoming
         </h1>
-        <ImageShot
-          current={current}
-          shots={detailsProjects?.shots || []}
-          onClick={() => setIsPopupOpen(true)} // Opens the popup on click
-        />
+        <ImageShot current={current} shots={detailsProjects?.shots || []} onClick={() => setIsPopupOpen(true)} />
         <div className="flex w-full gap-3 py-4">
           {detailsProjects?.shots?.map((shot, index) => (
             <ImageSelected key={index} src={shot} index={index} setCurrent={setCurrent} isActive={index === current} />
